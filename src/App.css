@@ -1,0 +1,154 @@
+.vocsapp_text{
+    margin-left:15px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+.welcome_vocsApp{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0a033c;
+    margin: 1rem;
+    line-height: 48px;
+}
+.border-line{
+    width: auto;
+    background-color: rgba(10, 3, 60, 0.2);
+    border-left:  1px solid rgba(10, 3, 60, 0.3137254902);
+    border-right: 0.5px solid rgba(10, 3, 60, 0.2078431373) ;
+    border-radius: 100%;
+    margin: 0.2rem;
+}
+.img{
+    margin-bottom: 7px;
+    border-radius: 100%;
+    padding: 8px;
+    background-color: #4f67ff;
+}
+.form-control{
+    height: 55px;
+    padding-left: 32px;
+    width: 400px;
+} 
+.form-check a{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.fa-envelope , .fa-lock{
+    position: absolute;
+}
+.form-div{
+    position: relative;
+}
+.fa-envelope , .fa-lock , .fa-number , .fa-user{ 
+    opacity: .6;
+    font-size: 17px;
+    left: 10px;
+    top: 19px;
+    position: absolute;
+}
+.my-btn{
+    width: 400px;
+    color: #fff;
+    background-color: #4f67ff;
+    padding: 15px 150px;
+    border: 1px solid transparent;
+}
+.or_line{
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.0588235294);
+    width: 176px;
+    height: 1px;
+}
+.or_txt{
+    padding: 10px;
+}
+.btn-facebook{
+    color: #fff;
+    background-color: #4267b2;
+}
+.btn-facebook , .btn-google{ 
+    padding-left: 20px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid transparent;
+}
+.form-footer{
+    font-weight: 500;
+    gap: 15px;
+}
+.form-footer a{
+    text-decoration:none;
+    color: #ef984f;
+}
+.forget-password{
+    color: black; 
+}
+.button-div{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+.eye-icon{
+    bottom: 19px;
+    right: 19px;
+    opacity: .6;
+    position: absolute;
+}
+.google-icon, .facebook-icon {
+    font-size: 20px;
+    position: absolute;
+    bottom: 14px; 
+}
+.google-icon{
+    left: 3%;
+}
+.facebook-icon {
+    right: 45%;
+}
+.form-control-1{
+    height: 55px;
+    width: 192px;
+}
+.btn-2hisse{
+    width: 400px;
+}
+.btn-name{
+    position: relative;
+}
+.form-control-1{
+    height: 55px;
+    width: 192px;
+}
+.update_password  {
+    margin-left: 94px;
+    width: 243px;
+}
+.update_password_txt{
+    margin-left: 53px;
+    width: 350px;
+}
+.my-update-btn{
+    color: #fff;
+    background-color: #4f67ff;
+    padding: 10px 63px;
+    margin-left: 94px;
+    border: 1px solid transparent;
+}
+.succes-password{
+    padding: 50px;
+    width: 53%;
+    text-align: center;
+    margin: 50px;
+}
+.my-succes-btn{
+    margin-top: 20px;
+    color: #fff;
+    background-color: #4f67ff;
+    padding: 7px 50px;
+    border: 1px solid transparent;
+
+}

@@ -1,0 +1,97 @@
+
+.bottom-card{
+    width: 192px;
+    height: 176px;
+    background-color: #152446;
+    border-radius: 26px
+}
+.blue-card, .orange-card{
+    background-color: #324eff;
+    border-radius: 20px;
+    position: relative;
+    width: 192px;
+    height: 172px;
+}
+.card-in{
+    opacity: .6;
+    position: absolute;
+}
+.VocAI{
+    gap: 35px;
+    top: 51px;
+    position: absolute;
+}
+.VocAI-chat{
+    font-weight: 500;
+    margin-top: -9px;
+    margin-left: 30px;
+    width: 40px;
+    color: #fff;
+}
+.button-start {
+    position: absolute;
+    bottom: 19px;
+    left: 20px;
+    padding: 2px 28px;
+    border: 1px solid transparent;
+    color: blue;
+}
+.Test-img{
+    font-weight: 500;
+    margin-left: 16px;
+    width: 100px;
+    color: #fff;
+}
+.award-img{
+    margin: -27px;
+
+}
+.orange-card{
+    background-color: #ED8936;
+}
+.bottom-card2{
+    background-color: #C05621 ;
+    width: 192px;
+    height: 176px;
+    border-radius: 26px
+}
+.Sidebar{
+    border-radius: 25px;
+    width: 450px;
+    padding: 25px;
+    background-color: #F3F6FF;
+}
+.nav-links{
+    margin-top: 10px;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-links a{
+    font-weight: 500;
+    color: black;
+    font-size: 22px;
+    align-items: center;
+    display: flex;
+    text-decoration: none !important;
+    gap: 25px ;
+}
+.icon{
+    font-size: 26px;
+}
+.text{
+    padding-bottom: 2px;
+}
+.active-menu{
+    font-weight: 500;
+    color: black;
+    font-size: 22px;
+    align-items: center;
+    display: flex;
+    text-decoration: none !important;
+    gap: 10px ;
+    color: blue ;
+}
+
+
