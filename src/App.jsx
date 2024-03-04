@@ -1,32 +1,14 @@
 import './App.css'
-import Login from '../src/components/Login'
-import Register from './components/Register'
-import RegisterFill from './components/RegisterFill'
-import UpdatePassword from './components/UpdatePassword'
-import SuccsesfullyUpdate from './components/SuccsesfullyUpdate'
-import HomePageBefore from './components/HomePageBefore'
-import { Layout } from 'antd'
+// import{ BrowserRouter, Route, Routes} from 'react-router-dom'
+import All from '../src/pages/All';
 
 
 
-
-const {Header, Sider}=Layout;
 function App() {
 
   return (
     <>
-    <div className="container">
-
-     <Login/>
-      <Register/>
-      <RegisterFill/>
-      <UpdatePassword/>
-      <SuccsesfullyUpdate/>
-      <HomePageBefore/>
-    
-
-    </div>
-
+    <All/>
      
     </>
   )

@@ -7,13 +7,17 @@ import award from '../assets/images/award.svg'
 import { GoHome, GoStar, GoShareAndroid } from "react-icons/go";
 import { IoBookOutline , IoSettingsOutline,  } from "react-icons/io5";
 import { LuBookMinus } from "react-icons/lu";
+import ai from '../assets/images/ai.svg'
+import coin from '../assets/images/coin.svg'
+import ring from '../assets/images/ring.svg'
 
 
 const HomePageBefore = () => {
   return (
 <>
 
-  <div className="container">
+  <div className="container d-flex">
+    {/* <div className="Page   "> */}
     <div className="Sidebar">
   <div className='sidebar-logo'>
           <a href=""><img src={Logo} alt="" className="img"/></a>
@@ -45,6 +49,7 @@ const HomePageBefore = () => {
     </div>
     </div>
 </div>
+
 <div className='menu'>
 
   <ul className='menu-links mt-4'>
@@ -93,10 +98,36 @@ const HomePageBefore = () => {
    </ul>
 </div>
 
+</div>
+
+  <header className='homepage  '>
+    <div className="header-button">
+    <button className='btn btn-outline-primary '>Sign in </button>
+    <button className='btn btn-outline-primary'>Sign up </button>
+    </div>
+    
+    <div className='header-nav-element'>
+      <div className='images-logo '>
+      <img src={ai} alt="" />
+      <img src={coin} alt="" />
+      <img src={ring} alt="" />
+      </div>
+  
+  </div>
+  </header>
+ 
+ 
+ 
 
 
-</div>
-</div>
+
+
+
+
+
+
+  </div>
+{/* </div> */}
 
             
 
