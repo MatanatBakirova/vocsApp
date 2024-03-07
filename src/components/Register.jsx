@@ -12,6 +12,7 @@ import WelcomToVocs from './WelcomToVocs';
 const Register = () => {
   return (
 <>
+<div className="container">
   <div className="d-flex">
     <WelcomToVocs/>
       <div className="border-line m-3"></div>
@@ -67,6 +68,7 @@ const Register = () => {
       </form>
   </div>
   {/* <!-- ? form end --> */}
+    </div>
     </div>
 
 

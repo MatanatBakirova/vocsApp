@@ -7,6 +7,7 @@ import WelcomToVocs from './WelcomToVocs';
 const UpdatePassword = () => {
   return (
     <>
+    <div className="container">
   <div className="d-flex">
     <WelcomToVocs/>
   
@@ -32,7 +33,7 @@ const UpdatePassword = () => {
   </div>
     </div>
     
-    
+    </div>
     
     
     

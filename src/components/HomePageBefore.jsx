@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import LevelsCard  from '../components/LevelsCard'
+import axios from 'axios'
 import Logo from '../assets/images/Logo.svg'
 import './HomePageBefore.css'
 import VocAI from '../assets/images/VocAI-img.svg'
@@ -13,16 +15,24 @@ import ring from '../assets/images/ring.svg'
 
 
 const HomePageBefore = () => {
+
+const [meqale, setMeqale]=useState([])
+console.log(meqale)
+useEffect( ()=>{
+  const adres = "api var"
+  axios.get(adres)
+  .then(response => setMeqale(response.data))
+  .catch(err =>console.log('serverde xeta var'))
+},[]);
   return (
 <>
-
-  <div className="container d-flex">
-    {/* <div className="Page   "> */}
+  <div className="page ">
     <div className="Sidebar">
   <div className='sidebar-logo'>
           <a href=""><img src={Logo} alt="" className="img"/></a>
             <span className="vocsapp_text ">VocsApp</span>    
   </div>
+  <div className="container">
   <div className="sidebar-cards d-flex gap-2">
     <div className='bottom-card'>
     <div className='blue-card'>
@@ -48,6 +58,7 @@ const HomePageBefore = () => {
       <button className='button-start bg-white rounded-pill'>Start</button>
     </div>
     </div>
+</div>
 </div>
 
 <div className='menu'>
@@ -100,41 +111,49 @@ const HomePageBefore = () => {
 
 </div>
 
-  <header className='homepage  '>
-    <div className="header-button">
+  <div className='homepage '>
+    <header className="header">
+      <div className='header-button'>
     <button className='btn btn-outline-primary '>Sign in </button>
     <button className='btn btn-outline-primary'>Sign up </button>
     </div>
     
     <div className='header-nav-element'>
-      <div className='images-logo '>
+      <div className='images-logo d-flex gap-2 '>
       <img src={ai} alt="" />
       <img src={coin} alt="" />
       <img src={ring} alt="" />
       </div>
-  
   </div>
   </header>
- 
- 
- 
 
+  <section className='mt-4'>
+    <div className="levels-word">
+    <span className='fs-4 fw-semibold'>Levels</span>
+    </div>
+    <div className="container">
+      {
 
+         meqale && meqale.map (aData =>(
+          <LevelsCard key={aData.id} name={aData.name} short_name={aData.short_name} />))
+        }
+        
+   {/* { <div className="col-12 col-md-6 col-lg-4">
+      <LevelsCard/>
 
+      </div>} */}
 
-
-
-
-
+    </div>
+  </section>
   </div>
-{/* </div> */}
+  </div>
+
 
             
 
 
 
-
-
+ 
 
 </>
   )

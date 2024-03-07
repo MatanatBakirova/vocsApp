@@ -11,6 +11,7 @@ import WelcomToVocs from './WelcomToVocs';
 const Login = () => {
   return (
    <> 
+   <div className="container">
   <div className="d-flex">
    <WelcomToVocs/>
 
@@ -56,7 +57,7 @@ const Login = () => {
   </div>
     </div>
 
-   
+    </div>
    </>
   )
 }

@@ -7,6 +7,7 @@ import WelcomToVocs from './WelcomToVocs'
 const SuccsesfullyUpdate = () => {
   return (
     <>
+    <div className="container">
   <div className="d-flex">
     <WelcomToVocs/>
       <div className="border-line m-3"></div>
@@ -17,6 +18,7 @@ const SuccsesfullyUpdate = () => {
       <h6 className='update_succes_txt opacity-25 mt-3 lh-base'>You have successfully reset your password.Please use a new password when sign in.</h6>
   <button type="submit" className=" my-succes-btn bg-primary rounded-4 ">Sign in</button>
   </div>
+    </div>
     </div>
     </>
   )

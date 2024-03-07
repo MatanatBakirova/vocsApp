@@ -10,16 +10,15 @@ import HomePageBefore from '../components/HomePageBefore'
 const All = () => {
   return (
     <>
-    <div className="container">
-    <Login/>
+ 
+    {/* <Login/>
       <Register/>
       <RegisterFill/>
       <UpdatePassword/>
-      <SuccsesfullyUpdate/>
+      <SuccsesfullyUpdate/> */}
       <HomePageBefore/>
 
-    </div>
-  
+    
 
 
     
