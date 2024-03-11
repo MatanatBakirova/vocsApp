@@ -12,21 +12,32 @@ import { LuBookMinus } from "react-icons/lu";
 import ai from '../assets/images/ai.svg'
 import coin from '../assets/images/coin.svg'
 import ring from '../assets/images/ring.svg'
+// import SwiperCore, { Autoplay } from 'swiper';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/swiper-bundle.css';
+
+// SwiperCore.use([Autoplay]);
+
+
+
+
 
 
 const HomePageBefore = () => {
 
+
 const [meqale, setMeqale]=useState([])
-console.log(meqale)
 useEffect( ()=>{
-  const adres = "api var"
+  const adres = "https://api.vocabulary.az/api/levels"
   axios.get(adres)
-  .then(response => setMeqale(response.data))
-  .catch(err =>console.log('serverde xeta var'))
+  .then(response => setMeqale(response.data.data))
+  .catch(err =>console.log('Serverdə xəta var :( '))
 },[]);
   return (
-<>
-  <div className="page ">
+    <>
+   
+
+  <div className="page">
     <div className="Sidebar">
   <div className='sidebar-logo'>
           <a href=""><img src={Logo} alt="" className="img"/></a>
@@ -131,31 +142,51 @@ useEffect( ()=>{
     <div className="levels-word">
     <span className='fs-4 fw-semibold'>Levels</span>
     </div>
-    <div className="container">
-      {
 
-         meqale && meqale.map (aData =>(
-          <LevelsCard key={aData.id} name={aData.name} short_name={aData.short_name} />))
-        }
-        
-   {/* { <div className="col-12 col-md-6 col-lg-4">
-      <LevelsCard/>
+    {/* <Swiper
+  spaceBetween={50}
+  slidesPerView={3}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+  }} 
+  breakpoints={{
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
+  }} 
+>*/}
+<div className="col-12 col-md-6 col-lg-4 gap-2 d-flex">
+  {meqale && meqale.map(aData => (
+    // <SwiperSlide key={aData.id}>
+      <LevelsCard key={aData.id} name={aData.name} short_name={aData.short_name} color={aData.color}/>
+    // </SwiperSlide>
+  ))}
+  </div>
+{/* </Swiper> */}
 
-      </div>} */}
-
-    </div>
+   
   </section>
-  </div>
-  </div>
-
-
-            
 
 
 
- 
+  <section>
+    
+  </section>
+ </div>
+ </div>
 
-</>
+ </>
+
   )
 }
 

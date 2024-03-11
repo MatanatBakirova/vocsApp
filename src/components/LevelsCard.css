@@ -7,17 +7,19 @@
     flex-direction: column; 
 }
 .level-card-left{
+  width: 65px;
+  height: 90px;
   display: flex;
   flex-direction: column;
-  padding:20px;
+  margin: 24px 0 0 24px;
 }
-.level-card-top
-{
-  height: 100px;
+.level-card-top{
+  width: 190px;
+  height: 106px;
   display: flex;
   align-items: center;
 }
-.a1{
+ .a1{
   background-color: #3b7ae9;
   width: 45px;
   height: 45px;
@@ -27,13 +29,12 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
-}
+} 
 .level-card-right{
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
-.word-content , .word-content-2{
+.word-content , .word-content-2, .size-card{
   display: flex;
   flex-direction: row;
 }
@@ -51,14 +52,14 @@
   border-radius: 5px;
   margin-top: 10px;
  }
- .size-card{
-  display: flex;
-  flex-direction: row;
- }
  .level-card-bottom{
   gap: 5px;
   margin-top: -12px;
   margin-left:  30px;
   display: flex;
   align-items: center;
+ }
+.name{
+  font-weight: 500;
+  font-size: 13px;
  }
