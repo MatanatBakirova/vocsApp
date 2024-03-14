@@ -9,7 +9,7 @@
     background-color: #324eff;
     border-radius: 20px;
     position: relative;
-    width: 192px;
+    width: 185px;
     height: 172px;
 }
 .card-in{
@@ -57,10 +57,15 @@
 }
 .Sidebar{
     border-radius: 25px;
-    width: 450px;
-    height: 750px;
+    width: 400px;
+    height: 650px;
     padding: 25px;
     background-color: #F3F6FF;
+}
+.sidebar-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav-links{
     margin-top: 10px;
@@ -107,7 +112,7 @@
 
 .page {
     display: grid;
-    grid-template-columns: 500px 1fr; 
+    grid-template-columns: 450px 1fr; 
   }
   .slick-list{
     display: flex;

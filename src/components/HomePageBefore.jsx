@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import LevelsCard  from '../components/LevelsCard'
+import Books from './Books'
 import axios from 'axios'
 import Logo from '../assets/images/Logo.svg'
 import './HomePageBefore.css'
@@ -27,16 +28,26 @@ const HomePageBefore = () => {
 
 
 const [meqale, setMeqale]=useState([])
+const [information, setInformation]=useState([])
+
 useEffect( ()=>{
   const adres = "https://api.vocabulary.az/api/levels"
   axios.get(adres)
   .then(response => setMeqale(response.data.data))
   .catch(err =>console.log('Serverdə xəta var :( '))
 },[]);
+
+useEffect( ()=>{
+
+
+  const api='https://api.vocabulary.az/api/books/list'
+  axios.get(api)
+  .then(response=> setInformation(response.data.data))
+  .catch(err => console.log('Serverdə xəta var :( '))
+},[])
+
   return (
     <>
-   
-
   <div className="page">
     <div className="Sidebar">
   <div className='sidebar-logo'>
@@ -165,12 +176,14 @@ useEffect( ()=>{
     },
   }} 
 >*/}
+<div className="container">
 <div className="col-12 col-md-6 col-lg-4 gap-2 d-flex">
   {meqale && meqale.map(aData => (
     // <SwiperSlide key={aData.id}>
       <LevelsCard key={aData.id} name={aData.name} short_name={aData.short_name} color={aData.color}/>
     // </SwiperSlide>
   ))}
+  </div>
   </div>
 {/* </Swiper> */}
 
@@ -180,6 +193,15 @@ useEffect( ()=>{
 
 
   <section>
+    <div className='fs-4 fw-semibold'>Books</div>
+    <div className="container">
+      <div className="col-12 col-md-6 col-lg-4">
+        {
+                <Books/>
+
+        }
+      </div>
+    </div>
     
   </section>
  </div>
