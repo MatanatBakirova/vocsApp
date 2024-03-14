@@ -1,21 +1,21 @@
 import React from 'react'
 import './LevelsCard.css'
-const LevelsCard = (props) => {
+const LevelsCard = ({short_name, name, color, words_count, group_count}) => {
   return (
     <div className="level-cards ">
         <div className="level-card-top">
           <div className='level-card-left'>
-          <span className='a1'>{props.short_name}</span>
-          <span  className='name'>{props.name}</span>
+          <span className='a1' style={{backgroundColor: 'rgba('+color+')'}}>{short_name}</span>
+          <span  className='name'>{name}</span>
           </div>
         <div className="level-card-right ">
           <span className='word-content'>
           <span className='opacity-75'>Lesson</span>
-          <span className=''>-10</span>
+          <span className=''> - {words_count}</span>
           </span>
           <span className='word-content-2'>
           <span className='opacity-75'>Word</span>
-          <span className=''>-10k</span>
+          <span className=''>- {group_count}</span>
           </span>
         </div>
         </div>
