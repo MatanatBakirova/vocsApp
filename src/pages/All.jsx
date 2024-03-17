@@ -1,24 +1,28 @@
-import React from 'react'
+import React,{useState} from 'react'
+import {BrowserRouter,Routes, Route} from 'react-router-dom'
 import Login from '../components/Login'
-// import Register from '../components/Register'
-// import RegisterFill from '../components/RegisterFill'
-// import SuccsesfullyUpdate from '../components/SuccsesfullyUpdate'
-// import UpdatePassword from '../components/UpdatePassword'
+import Register from '../components/Register'
 import HomePageBefore from '../components/HomePageBefore'
+import SidebarFull from '../components/sections/Sidebars/SidebarFull/SidebarFull'
 
 
 const All = () => {
-  return (
-    <>
- 
-    {/* <Login/>
-      <Register/>
-      <RegisterFill/>
-      <UpdatePassword/>
-      <SuccsesfullyUpdate/> */}
-      <HomePageBefore/>
 
-    </>
+  return (
+
+    
+<div className="page container-fluid pt-3">
+<BrowserRouter>
+<SidebarFull/>
+    <Routes>
+        <Route path='/' element={<HomePageBefore/>}/>
+        <Route path='/Sign-in' element={<Login/>}/>
+        <Route path='/Sign-up' element={<Register/>}/>
+    </Routes>
+  </BrowserRouter>
+    </div>
+
+  
   )
 }
 

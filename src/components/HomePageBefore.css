@@ -60,7 +60,7 @@
     width: 400px;
     height: 650px;
     padding: 25px;
-    background-color: #F3F6FF;
+    background-color: #f3f6ff;
 }
 .sidebar-cards{
     display: flex;
@@ -74,6 +74,10 @@
     display: flex;
     align-items: center;
 }
+.nav-links .text {
+    color: #5D5A6F;
+    padding-bottom: 2px;
+}
 .nav-links a{
     font-weight: 500;
     color: black;
@@ -84,10 +88,8 @@
     gap: 25px ;
 }
 .icon{
+    color: #5D5A6F;
     font-size: 26px;
-}
-.text{
-    padding-bottom: 2px;
 }
 .active-menu{
     font-weight: 500;
@@ -112,7 +114,7 @@
 
 .page {
     display: grid;
-    grid-template-columns: 450px 1fr; 
+    grid-template-columns: 410px 1fr; 
   }
   .slick-list{
     display: flex;

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, {useEffect, useState} from 'react'
 import './LevelsCard.css'
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -22,7 +21,7 @@ const Levels = () => {
     return (
         <section className='mt-4' style={{width: "1024px"}}>
             <div className="levels-word">
-                <span className='fs-4 fw-semibold'>Levels</span>
+                <span className='fs-4 fw-semibold pb-5'>Levels</span>
             </div>
 
 

@@ -7,9 +7,9 @@ const BookItem = ({title, author, image, price, discount, discount_price, free})
             <div className='books-image'>
                 <img src={image} className="card-img-top" alt=""/>
             </div>
-            <div className="card-body" style={{marginTop: "250px;"}}>
+            <div className="card-body">
                 <h5 className="card-title ">{title}</h5>
-                <span className='d-flex gap-2'>
+                <span className=' card-text d-flex gap-2'>
                     {
                         (() => {
                             if (discount) {

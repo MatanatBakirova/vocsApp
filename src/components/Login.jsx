@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
@@ -10,13 +10,11 @@ import WelcomToVocs from './WelcomToVocs';
      
 const Login = () => {
   return (
-   <> 
+
    <div className="container">
-  <div className="d-flex">
+  <div className="d-flex ">
    <WelcomToVocs/>
-
       <div className="border-line m-3"></div>
-
 <div className="col-md-6 d-flex justify-content-center align-items-center">
     <form>
       <div className="form-div m-3">
@@ -58,7 +56,7 @@ const Login = () => {
     </div>
 
     </div>
-   </>
+
   )
 }
 

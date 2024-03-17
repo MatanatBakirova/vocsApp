@@ -4,7 +4,6 @@ import './Books.css'
 import BookItem from "./BookItem.jsx";
 import axios from "axios";
 import {Swiper, SwiperSlide} from "swiper/react";
-import LevelsCard from "../Levels/LevelsCard.jsx";
 
 const Books = () => {
 
@@ -13,7 +12,7 @@ const Books = () => {
 
     useEffect(() => {
 
-        const USER_TOKEN = 'test';
+        const USER_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnZvY2FidWxhcnkuYXovYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTA0Mjg1NjAsImV4cCI6MTczMzc1NjU2MCwibmJmIjoxNzEwNDI4NTYwLCJqdGkiOiJKR3dvMHJReWtSNk40bXMwIiwic3ViIjoiOTU3OCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7EpzzGQd6H0zfdQf5VXR7tox2HlYizkXsV_jAjHshZA';
 
         const api = 'https://api.vocabulary.az/api/books/list'
         axios.get(api, {
@@ -28,9 +27,9 @@ const Books = () => {
     }, []);
 
     return (
-            <section style={{width: "1024px"}}>
+            <section className='mt-4' style= {{width: "1024px"}}>
                 <div className='fs-4 fw-semibold'>Books</div>
-                <div className="container">
+                {/* <div className="container"> */}
                     <Swiper
                         spaceBetween={200}
                         slidesPerView={3}
@@ -55,7 +54,6 @@ const Books = () => {
 
                     <div className="col-12 col-md-6 col-lg-4">
                         {bookList && bookList.map(bookData => (
-                            // eslint-disable-next-line react/jsx-key
                             <SwiperSlide>
                                 <BookItem key={bookData.id}
                                             title={bookData.title}
@@ -71,7 +69,7 @@ const Books = () => {
                     </div>
 
                     </Swiper>
-                </div>
+                {/* </div> */}
 
             </section>
     )

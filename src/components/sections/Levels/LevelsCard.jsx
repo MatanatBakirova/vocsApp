@@ -19,13 +19,13 @@ const LevelsCard = ({short_name, name, color, words_count, group_count}) => {
           </span>
         </div>
         </div>
-        <div className="level-card-bottom">
+        {/* <div className="level-card-bottom">
         <div className="size-card">
       <div className="size-card-in"></div>
       <div className="size-card-out"></div>
       <span className='ms-2'> 67%</span>
       </div>
-    </div>
+    </div> */}
       </div>
   )
 }

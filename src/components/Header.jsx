@@ -1,14 +1,17 @@
 import ai from "../assets/images/ai.svg";
 import coin from "../assets/images/coin.svg";
 import ring from "../assets/images/ring.svg";
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 
-const Header = (props) => {
+const Header = () => {
+
     return (
         <header className="header">
             <div className='header-button'>
-                <button className='btn btn-outline-primary '>Sign in</button>
-                <button className='btn btn-outline-primary'>Sign up</button>
+                <Link to="sign-in"><button className='btn btn-outline-primary '>Sign in</button></Link>
+               
+                <Link to="sign-up"><button className='btn btn-outline-primary'>Sign up</button></Link>
             </div>
 
             <div className='header-nav-element'>
