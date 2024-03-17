@@ -2,14 +2,14 @@ import React from 'react'
 import logo from '../assets/images/Logo.svg'
 import WelcomeVocsapp from '../assets/images/welcome_vocsapp.svg'
 import ImageSuccesPassword from '../assets/images/succes-update.svg'
-import WelcomToVocs from './WelcomToVocs'
+import WelcomeToVocs from './WelcomeToVocs.jsx'
 
 const SuccsesfullyUpdate = () => {
   return (
     <>
     <div className="container">
   <div className="d-flex">
-    <WelcomToVocs/>
+    <WelcomeToVocs/>
       <div className="border-line m-3"></div>
 
 <div className=" succes-password col-md-6  ">

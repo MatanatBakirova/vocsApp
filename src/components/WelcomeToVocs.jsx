@@ -3,7 +3,7 @@ import logo from '../assets/images/Logo.svg'
 import WelcomeVocsapp from '../assets/images/welcome_vocsapp.svg'
 
 
-const WelcomToVocs = () => {
+const WelcomeToVocs = () => {
   return (
 <>
 <div className=" col-md-5 section-left-side m-3">
@@ -19,4 +19,4 @@ const WelcomToVocs = () => {
 </>  )
 }
 
-export default WelcomToVocs
+export default WelcomeToVocs

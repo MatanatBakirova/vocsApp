@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './Register.css'
 import { MdOutlineEmail } from "react-icons/md";
@@ -7,14 +8,14 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
-import WelcomToVocs from './WelcomToVocs';
+import WelcomeToVocs from './WelcomeToVocs.jsx';
 
 const Register = () => {
   return (
 <>
 <div className="container">
   <div className="d-flex">
-    <WelcomToVocs/>
+    <WelcomeToVocs/>
       <div className="border-line m-3"></div>
 <div className="col-md-6 d-flex justify-content-center align-items-center">
     <form>
