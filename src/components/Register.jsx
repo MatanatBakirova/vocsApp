@@ -13,9 +13,11 @@ import WelcomeToVocs from './WelcomeToVocs.jsx';
 const Register = () => {
   return (
 <>
-<div className="container">
+<div className=" register container">
+  <div className='d-flex justify-content-center'style={{width:"1024px"}}>
   <div className="d-flex">
     <WelcomeToVocs/>
+    </div>
       <div className="border-line m-3"></div>
 <div className="col-md-6 d-flex justify-content-center align-items-center">
     <form>
@@ -68,9 +70,9 @@ const Register = () => {
       </div>
       </form>
   </div>
-  {/* <!-- ? form end --> */}
     </div>
     </div>
+ 
 
 
 </>  )

@@ -13,7 +13,7 @@ import { FaRegUser } from "react-icons/fa";
 const RegisterFill = () => {
   return (
     <>
-    <div className="container">
+    <div className="container register">
   <div className="d-flex">
     {/* <!-- todo left-side start --> */}
     <div className=" col-md-5 section-left-side m-3">

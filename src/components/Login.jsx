@@ -7,14 +7,17 @@ import {FcGoogle} from "react-icons/fc";
 import {FaSquareFacebook} from "react-icons/fa6";
 import {IoEyeOutline} from "react-icons/io5";
 import WelcomeToVocs from './WelcomeToVocs.jsx';
+import './Login.css'
 
 
 const Login = () => {
     return (
 
-        <div className="container">
-            <div className="d-flex ">
+        <div className="container login">
+            <div className="d-flex justify-content-center"style={{width:"1024px"}}>
+            <div className="welcometovocs" >
                 <WelcomeToVocs/>
+                </div>
                 <div className="border-line m-3"></div>
                 <div className="col-md-6 d-flex justify-content-center align-items-center">
                     <form>
@@ -55,8 +58,7 @@ const Login = () => {
                         </div>
                     </form>
                 </div>
-            </div>
-
+                </div>
         </div>
 
     )

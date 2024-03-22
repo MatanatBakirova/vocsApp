@@ -111,10 +111,10 @@
     display: flex;
     justify-content: space-between;
 }
-
 .page {
+    padding: 20px;
     display: grid;
-    grid-template-columns: 410px 1fr; 
+    grid-template-columns: 430px 1fr; 
   }
   .slick-list{
     display: flex;

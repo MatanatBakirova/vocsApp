@@ -10,13 +10,13 @@ import Header from "./Header.jsx";
 const HomePageBefore = () => {
 
     return (
-        // <div className="">
+        <div className="">
         <div className='homepage'>
             <Header/>
             <Levels key="levels"/>
             <Books/>
         </div>
-        // </div>
+         </div>
     )
 }
 

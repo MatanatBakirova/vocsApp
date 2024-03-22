@@ -6,6 +6,7 @@
     text-decoration: none !important;
 }
 .welcome_vocsApp{
+    width: 400px;
     font-size: 2.5rem;
     font-weight: 800;
     color: #0a033c;

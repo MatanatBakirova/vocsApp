@@ -13,16 +13,22 @@ const All = () => {
     const showSidebar = location.pathname === '/' || location.pathname === '/some-other-path';
 
     return (
-
-        <div className="page container-fluid pt-3">
-            {showSidebar && <SidebarFull />}
-            <Routes>
-                <Route path='/' element={<HomePageBefore/>}/>
-                <Route path='/Sign-in' element={<Login/>}/>
-                <Route path='/Sign-up' element={<Register/>}/>
-            </Routes>
-        </div>
-
+<div className='page'>
+    {showSidebar && <SidebarFull />}
+    <Routes>
+        <Route path='/' element={<HomePageBefore/>}/>
+        <Route path='/Sign-in' element={
+            <div className="login-register-page"> {/* Login sehifesi ucun yeni bir div */}
+                <Login/>
+            </div>
+        }/>
+        <Route path='/Sign-up' element={
+            <div className="login-register-page"> {/* Register sehifesi ucun yeni bir div */}
+                <Register/>
+            </div>
+        }/>
+    </Routes>
+</div>
     )
 }
 
