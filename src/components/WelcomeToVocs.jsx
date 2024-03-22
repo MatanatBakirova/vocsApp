@@ -12,10 +12,6 @@ const WelcomeToVocs = () => {
             <p className="welcome_vocsApp pt-4">Welcome to VocsApp Online Learning Platform</p>
             <a href=""><img className="image-1" src={WelcomeVocsapp} alt=""/></a>  
     </div>
-
-
-
-
 </>  )
 }
 

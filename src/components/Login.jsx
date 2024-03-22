@@ -38,18 +38,15 @@ const Login = () => {
                             <a href="" className="forget-password fw-medium text-decoration-none">Forgot Password?</a>
                         </div>
                         <button type="submit" className="m-3 my-btn rounded-4 ">Sign in</button>
-                        {/* bottom line start */}
                         <div className="line">
                             <span className="or_line"></span>
                             <span className="or_txt">or</span>
                             <span className="or_line"></span>
                         </div>
-                        {/* bottom line end */}
                         <div className=" button-div">
                             <FcGoogle className="google-icon"/>
                             <button className="btn-google bg-white  border rounded-4">Sign in with Google</button>
                             <FaSquareFacebook className="facebook-icon"/>
-                            {/* <FaSquareFacebook /> */}
                             <button className="btn-facebook rounded-4 ">Sign in with Facebook</button>
                         </div>
                         <div className="form-footer mt-4 d-flex align-items-center justify-content-center">
