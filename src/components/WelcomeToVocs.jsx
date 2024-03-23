@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import logo from '../assets/images/Logo.svg'
 import WelcomeVocsapp from '../assets/images/welcome_vocsapp.svg'

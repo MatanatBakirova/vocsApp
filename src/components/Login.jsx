@@ -14,7 +14,7 @@ const Login = () => {
     return (
 
         <div className="container login">
-            <div className="d-flex justify-content-center"style={{width:"1024px"}}>
+            <div className="d-flex justify-content-center" style={{width:"1024px"}}>
             <div className="welcometovocs" >
                 <WelcomeToVocs/>
                 </div>

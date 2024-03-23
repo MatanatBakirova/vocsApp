@@ -11,14 +11,14 @@ const SidebarMenu = () => {
     <div className='menu'>
     <ul className='menu-links mt-4'>
         <li className='nav-links '>
-            <a href="" className=''>
+            <Link to="/">
                 <GoHome className='icon'/>
                 <span className=' active-menu'>Main Page</span>
-            </a>
+            </Link>
 
         </li>
         <li className='nav-links'>
-            <Link to="Lesson">
+            <Link to="lesson">
                 <LuBookMinus className='icon'/>
                 <span className='text'>Lesson</span>
             </Link>
