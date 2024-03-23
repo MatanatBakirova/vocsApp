@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {GoHome, GoStar, GoShareAndroid} from "react-icons/go";
 import {IoBookOutline, IoSettingsOutline,} from "react-icons/io5";
 import {LuBookMinus} from "react-icons/lu";
+import { Link } from 'react-router-dom';
 
 
 const SidebarMenu = () => {
@@ -17,10 +18,10 @@ const SidebarMenu = () => {
 
         </li>
         <li className='nav-links'>
-            <a href="">
+            <Link to="Lesson">
                 <LuBookMinus className='icon'/>
                 <span className='text'>Lesson</span>
-            </a>
+            </Link>
 
         </li>
         <li className='nav-links'>

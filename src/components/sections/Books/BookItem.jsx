@@ -4,7 +4,7 @@ import './Books.css'
 const BookItem = ({title, author, image, price, discount, discount_price, free}) => {
     return (
         <div className="card">
-            <div className='books-image'>
+            <div className='books-image '>
                 <img src={image} className="card-img-top" alt=""/>
             </div>
             <div className="card-body">

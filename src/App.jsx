@@ -2,6 +2,8 @@ import './App.css'
 // import{ BrowserRouter, Route, Routes} from 'react-router-dom'
 import All from '../src/pages/All';
 import {BrowserRouter} from "react-router-dom";
+import SidebarCards from './components/sections/Sidebars/Sidebar-cards/SidebarCards';
+import SidebarFull from './components/sections/Sidebars/SidebarFull/SidebarFull';
 
 
 
@@ -11,7 +13,7 @@ function App() {
     <>
       <BrowserRouter>
         <All/>
-      </BrowserRouter>
+       </BrowserRouter>
     </>
   )
 }

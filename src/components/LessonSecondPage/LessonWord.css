@@ -1,0 +1,30 @@
+.hidebutton{
+    border: 1px solid #dedede;
+    background-color: #f3f6ff;
+    border-radius: 10px;
+    padding-right: 50px;
+    outline: none;
+    width: 189px;
+    height: 40px;
+}
+.lesson-hidewords, .lesson-translateword{
+    display: inline-block;
+    position: relative;
+}
+.switcher{
+    top: 20%;
+    position: absolute;
+    right: 10px;
+}
+.plus-words ,.search-words{
+    border: 1px solid #dedede;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 30px;
+    background-color: #f3f6ff;
+}

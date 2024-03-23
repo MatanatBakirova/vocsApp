@@ -8,6 +8,7 @@ import Levels from "./sections/Levels/Levels.jsx";
 import Header from "./Header.jsx";
 import Lesson from './sections/Lessons/LessonName.jsx';
 import Lessons from './sections/Lessons/Lessons.jsx';
+import LessonWords from './LessonSecondPage/LessonWords.jsx';
 
 const HomePageBefore = () => {
 
@@ -17,7 +18,7 @@ const HomePageBefore = () => {
             <Header/>
             <Levels key="levels"/>
             <Books/>
-            <Lessons/>
+            <LessonWords/>
         </div>
         //  </div>
     )

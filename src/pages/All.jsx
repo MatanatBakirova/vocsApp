@@ -1,10 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import {Routes, Route, useLocation} from 'react-router-dom'
+import {Routes, Route, useLocation, Router, } from 'react-router-dom'
 import Login from '../components/Login'
 import Register from '../components/Register'
 import HomePageBefore from '../components/HomePageBefore'
 import SidebarFull from '../components/sections/Sidebars/SidebarFull/SidebarFull'
+import Lessons from '../components/sections/Lessons/Lessons'
 
 
 const All = () => {
@@ -27,8 +28,9 @@ const All = () => {
                 <Register/>
             </div>
         }/>
+        <Route path='/Lesson' element={<Lessons/>}/>
     </Routes>
-</div>
+    </div>
     )
 }
 
