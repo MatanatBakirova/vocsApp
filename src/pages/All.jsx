@@ -6,7 +6,6 @@ import Register from '../components/Register'
 import HomePageBefore from '../components/HomePageBefore'
 import SidebarFull from '../components/sections/Sidebars/SidebarFull/SidebarFull'
 import Lessons from '../components/sections/Lessons/Lessons'
-import LessonName from '../components/sections/Lessons/LessonName'
 
 
 const All = () => {
@@ -20,6 +19,8 @@ const All = () => {
             {!showSidebar && <SidebarFull/>}
             <Routes>
                 <Route path='/' element={<HomePageBefore/>}/>
+                <Route path='/lesson' element={<Lessons/>}/>
+
                 <Route path='/Sign-in' element={
                     <div className="login-register-page"> {/* Login sehifesi ucun yeni bir div */}
                         <Login/>
@@ -30,7 +31,6 @@ const All = () => {
                         <Register/>
                     </div>
                 }/>
-                <Route path='/lesson' element={<Lessons/>}/>
             </Routes>
         </div>
     )

@@ -6,9 +6,8 @@ import 'swiper/swiper-bundle.css';
 import Books from './sections/Books/Books.jsx'
 import Levels from "./sections/Levels/Levels.jsx";
 import Header from "./Header.jsx";
-import Lesson from './sections/Lessons/LessonName.jsx';
-import Lessons from './sections/Lessons/Lessons.jsx';
 import LessonWords from './sections/LessonSecondPage/LessonWords.jsx';
+
 const HomePageBefore = () => {
 
     return (
