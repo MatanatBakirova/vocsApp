@@ -6,12 +6,14 @@ import Register from '../components/Register'
 import HomePageBefore from '../components/HomePageBefore'
 import SidebarFull from '../components/sections/Sidebars/SidebarFull/SidebarFull'
 import Lessons from '../components/sections/Lessons/Lessons'
+import LessonName from '../components/sections/Lessons/LessonName'
 
 
 const All = () => {
     const location = useLocation();
 
     const showSidebar = location.pathname === '/sign-in' || location.pathname === '/sign-up';
+
 
     return (
         <div className='page'>

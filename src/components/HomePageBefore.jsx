@@ -8,19 +8,16 @@ import Levels from "./sections/Levels/Levels.jsx";
 import Header from "./Header.jsx";
 import Lesson from './sections/Lessons/LessonName.jsx';
 import Lessons from './sections/Lessons/Lessons.jsx';
-import LessonWords from './LessonSecondPage/LessonWords.jsx';
-
+import LessonWords from './sections/LessonSecondPage/LessonWords.jsx';
 const HomePageBefore = () => {
 
     return (
-        // <div className="">
         <div className='homepage'>
             <Header/>
             <Levels key="levels"/>
             <Books/>
             <LessonWords/>
-        </div>
-        //  </div>
+            </div>
     )
 }
 

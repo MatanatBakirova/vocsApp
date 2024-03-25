@@ -14,7 +14,6 @@ const LessonName = () => {
       <div className='lesson-names'>
       <span className='fw-bold mb-1'>Gunel Zakiyeva</span>
       <span className='text-secondary'>@gunelZakiyeva</span>
-
       </div>
     </div>
   </div>
