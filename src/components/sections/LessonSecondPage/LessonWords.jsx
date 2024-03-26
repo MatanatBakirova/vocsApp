@@ -12,7 +12,7 @@ const LessonWords = () => {
         <section className="lesson-words  ">
 
 
-          <div className='common-component d-flex '>
+          <div className='common-component d-flex align-items-center justify-content-center '>
 
             <div className='lesson-word-name d-flex align-items-center justify-content-center'>
            <span className='fw-semibold fs-3 '>Lesson Name</span>

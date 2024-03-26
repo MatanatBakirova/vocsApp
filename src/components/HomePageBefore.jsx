@@ -15,7 +15,7 @@ const HomePageBefore = () => {
             <Header/>
             <Levels key="levels"/>
             <Books/>
-            <LessonWords/>
+            {/* <LessonWords/> */}
             </div>
     )
 }

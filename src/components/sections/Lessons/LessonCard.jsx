@@ -9,7 +9,7 @@ const LessonCard = () => {
   return (
     <div>
         <div className='lesson-name'>
-            <span className='fw-semibold fs-5 ps-4'>Lesson Name</span>
+            <span className='fw-semibold fs-5 ps-4'>Unit title</span>
 
       
         <div className='total-words'>

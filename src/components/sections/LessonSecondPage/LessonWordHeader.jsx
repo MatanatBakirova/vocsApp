@@ -4,38 +4,41 @@ import '../LessonSecondPage/LessonWord.css'
 const LessonWordHeader = () => {
   return (
     <div>
-        <header>
-        <nav class="navbar navbar-expand-lg border ">
-  <div class="container-fluid">
+        <ul class="nav border justify-content-between">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-     
 
-      </ul>
-
-    </div>
+          <div className='d-flex'>
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" href="#">Play</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Words</a>
+  </li>
   </div>
-</nav>
 
+
+  <li class="nav-item">
+    <a class="nav-link" href="#">Translate</a>
+  </li>
+  <div className='d-flex'>
+ 
+  <li class="nav-item">
+    <a class="nav-link" href="#">Status</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Edit</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Delete</a>
+  </li>
+  </div>
+
+</ul>
 
 
 
 
             
-        </header>
 
 
 

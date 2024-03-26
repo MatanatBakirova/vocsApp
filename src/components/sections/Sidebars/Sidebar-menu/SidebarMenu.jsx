@@ -18,17 +18,17 @@ const SidebarMenu = () => {
 
         </li>
         <li className='nav-links'>
-            <Link to="lesson">
+            <Link to="lessons">
                 <LuBookMinus className='icon'/>
                 <span className='text'>Lesson</span>
             </Link>
 
         </li>
         <li className='nav-links'>
-            <a href="">
+            <Link to="books">
                 <IoBookOutline className='icon'/>
                 <span className='text'>Books</span>
-            </a>
+            </Link>
 
         </li>
         <li className='nav-links'>
