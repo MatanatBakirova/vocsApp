@@ -16,20 +16,28 @@ const Levels = () => {
 
     useEffect(() => {
 
-        setloading(true)
+        const cachedLevels = localStorage.getItem('levels');
 
-        const levelsApi = "https://api.vocabulary.az/api/levels"
-        axios.get(levelsApi)
-            .then(response => {
-                setLevels(response.data.data)
-                setloading(false)
-            })
-            .catch(() => { 
-                console.log('Serverdə xəta var :( ')
-                setloading(false)
-        })
+        if(cachedLevels){
+            setLevels(JSON.parse(cachedLevels));
+        }else{
+            setloading(true)
 
-        console.log(`used levels - ${levelsApi}`);
+            const levelsApi = "https://api.vocabulary.az/api/levels"
+            axios.get(levelsApi)
+                .then(response => {
+                    setLevels(response.data.data)
+                    setloading(false)
+                    localStorage.setItem('levels', JSON.stringify(response.data.data))
+                })
+                .catch(() => {
+                    console.log('Serverdə xəta var :( ')
+                    setloading(false)
+                })
+
+            console.log(`used levels - ${levelsApi}`);
+        }
+
     }, []);
 
     if(loading){

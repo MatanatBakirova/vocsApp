@@ -1,8 +1,8 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react'
 import ai from "../assets/images/ai.svg";
 import coin from "../assets/images/coin.svg";
 import ring from "../assets/images/ring.svg";
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import profilePhoto from "../assets/images/profilPhoto.svg";
 

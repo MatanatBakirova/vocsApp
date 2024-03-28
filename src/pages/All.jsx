@@ -6,6 +6,7 @@ import Register from '../components/Register'
 import HomePageBefore from '../components/HomePageBefore'
 import SidebarFull from '../components/sections/Sidebars/SidebarFull/SidebarFull'
 import Lessons from '../components/sections/Lessons/Lessons'
+import BookUnits from "../components/sections/BookUnits/BookUnits.jsx";
 
 
 const All = () => {
@@ -20,6 +21,7 @@ const All = () => {
             <Routes>
                 <Route path='/' element={<HomePageBefore/>}/>
                 <Route path='/lesson' element={<Lessons/>}/>
+                <Route path="/book/:id" element={<BookUnits/>} />
 
                 <Route path='/Sign-in' element={
                     <div className="login-register-page"> {/* Login sehifesi ucun yeni bir div */}
