@@ -14,8 +14,7 @@ const Books = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
-        const USER_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnZvY2FidWxhcnkuYXovYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTA0Mjg1NjAsImV4cCI6MTczMzc1NjU2MCwibmJmIjoxNzEwNDI4NTYwLCJqdGkiOiJKR3dvMHJReWtSNk40bXMwIiwic3ViIjoiOTU3OCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7EpzzGQd6H0zfdQf5VXR7tox2HlYizkXsV_jAjHshZA';
+        const cachedBooks = localStorage.getItem('books');
 
 
         const unitApi = 'https://api.vocabulary.az/api/books/id/units'
@@ -24,16 +23,30 @@ const Books = () => {
             headers: {
                 'Authorization': `Bearer ${USER_TOKEN}`
             }
+        if (cachedBooks) {
+            setBookList(JSON.parse(cachedBooks));
+        } 
+        else {
 
-        })
-            .then(response => {
-                setBookList(response.data.data);
-                setLoading(false);
+            setLoading(true);
+            const USER_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnZvY2FidWxhcnkuYXovYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTA0Mjg1NjAsImV4cCI6MTczMzc1NjU2MCwibmJmIjoxNzEwNDI4NTYwLCJqdGkiOiJKR3dvMHJReWtSNk40bXMwIiwic3ViIjoiOTU3OCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7EpzzGQd6H0zfdQf5VXR7tox2HlYizkXsV_jAjHshZA';
+
+            const api = 'https://api.vocabulary.az/api/books/list'
+            axios.get(api, {
+                headers: {
+                    'Authorization': `Bearer ${USER_TOKEN}`
+                }
             })
-            .catch((err) => {
-                console.log('Serverdə xəta: ' + err);
-                setLoading(false);
-            })
+                .then(response => {
+                    setBookList(response.data.data);
+                    setLoading(false);
+                    localStorage.setItem('books', JSON.stringify(response.data.data));
+                })
+                .catch((err) => {
+                    console.log('Serverdə xəta: ' + err);
+                    setLoading(false);
+                })
+        }
 
     }, []);
 
@@ -42,22 +55,22 @@ const Books = () => {
             <section className='mt-4' style={{width: "1024px"}}>
                 <div className='fs-4 fw-semibold'>Books</div>
                 <div className="d-flex">
-                    <div className="col-12 col-md-6 col-lg-3" style={{ margin: '10px' }}>
+                    <div className="col-12 col-md-6 col-lg-3" style={{margin: '10px'}}>
                         <Skeleton count={1} height={400} width={206}/>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-3" style={{ margin: '10px' }}>
+                    <div className="col-12 col-md-6 col-lg-3" style={{margin: '10px'}}>
                         <Skeleton count={1} height={400} width={206}/>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-3" style={{ margin: '10px' }}>
+                    <div className="col-12 col-md-6 col-lg-3" style={{margin: '10px'}}>
                         <Skeleton count={1} height={400} width={206}/>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-3" style={{ margin: '10px' }}>
+                    <div className="col-12 col-md-6 col-lg-3" style={{margin: '10px'}}>
                         <Skeleton count={1} height={400} width={206}/>
                     </div>
                 </div>
             </section>
 
-    )
+        )
     }
 
     return (
@@ -91,6 +104,7 @@ const Books = () => {
                     {bookList && bookList.map(bookData => (
                         <SwiperSlide>
                             <BookItem key={bookData.id}
+                                      id={bookData.id}
                                       title={bookData.title}
                                       image={bookData.image}
                                       author={bookData.author}
@@ -108,6 +122,6 @@ const Books = () => {
 
         </section>
     )
-    }
+}
 
-    export default Books
+export default Books

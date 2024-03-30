@@ -1,14 +1,23 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './Books.css'
+import {Link} from "react-router-dom";
 
-const BookItem = ({title, author, image, price, discount, discount_price, free}) => {
+
+// eslint-disable-next-line react/prop-types
+const BookItem = ({id, title, author, image, price, discount, discount_price, free}) => {
     return (
+
         <div className="card">
-            <div className='books-image '>
-                <img src={image} className="card-img-top" alt=""/>
-            </div>
+            <Link to={`/book/${id}`}>
+                <div className='books-image '>
+                    <img src={image} className="card-img-top" alt=""/>
+                </div>
+            </Link>
             <div className="card-body">
-                <h5 className="card-title ">{title}</h5>
+                <Link to={`/book/${id}`}>
+                    <h5 className="card-title ">{title}</h5>
+                </Link>
                 <span className=' card-text d-flex gap-2'>
                     {
                         (() => {
@@ -26,10 +35,11 @@ const BookItem = ({title, author, image, price, discount, discount_price, free})
                         })()
                     }
 
-            </span>
+                            </span>
                 <a href="#" className="owner fw-light">{author}</a>
             </div>
-        </div>)
+        </div>
+    )
 }
 
 export default BookItem
