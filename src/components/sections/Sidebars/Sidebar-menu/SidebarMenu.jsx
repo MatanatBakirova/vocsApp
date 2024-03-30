@@ -32,24 +32,24 @@ const SidebarMenu = () => {
 
         </li>
         <li className='nav-links'>
-            <a href="">
+            <Link to="/">
                 <GoStar className='icon'/>
                 <span className='text'>Add Premium</span>
-            </a>
+            </Link>
 
         </li>
         <li className='nav-links'>
-            <a href="">
+            <Link to="/">
                 <IoSettingsOutline className='icon'/>
                 <span className='text'>Settings</span>
-            </a>
+            </Link>
 
         </li>
         <li className='nav-links'>
-            <a href="">
+            <Link to="/">
                 <GoShareAndroid className='icon'/>
                 <span className='text'>Share</span>
-            </a>
+            </Link>
 
         </li>
     </ul>
