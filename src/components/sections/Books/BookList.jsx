@@ -14,9 +14,9 @@ const BookList = () => {
         <Levels/>
         <LessonTop/>
     <div className='lesson-name'>
-        <Link to={1}>
+        {/* <Link to={1}> */}
         <span className='fw-semibold fs-5 ps-4'>Unit title</span>
-        </Link>
+        {/* </Link> */}
     
     <div className='total-words'>
         <div>

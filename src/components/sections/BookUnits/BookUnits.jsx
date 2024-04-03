@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, {useEffect, useState} from 'react'
 import Header from "../../Header.jsx";
 import {useParams} from "react-router-dom";
@@ -47,17 +46,19 @@ const BookUnits = () => {
             <BookUnitTop/>
             <div className="col-12 ">
             {
-                  bookUnitList.map((bookUnit) => {
+
+                
+                 bookUnitList && bookUnitList.map((bookUnit) => {
                     return(
-                     
+
                         <BookUnitCard key={bookUnit.id} bookUnit={bookUnit}/>
-                    )
+
+                    );
                     
-                })
-            }
+                })}
             </div>
         </div>
-    )
+    );
 }
 
 export default BookUnits
