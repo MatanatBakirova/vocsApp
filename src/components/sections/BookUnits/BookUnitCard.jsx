@@ -8,7 +8,7 @@ import './BookUnit.css'
 
 const BookUnitCard = ({id, bookUnit}) => {
   return (
-    <div>
+    <div className='d-flex mb-2'>
         <div className='lesson-name'>
             <span className='fw-semibold fs-5 ps-4'>{bookUnit.title}</span>
 
@@ -31,17 +31,17 @@ const BookUnitCard = ({id, bookUnit}) => {
                     <a href=""><FaArrowUpRightDots /></a>
                 </li>
             </ul>
-            <ul>
+            {/* <ul>
                 <li>
                     <a href=""><FiEdit /></a>
                 </li>
-            </ul>
+            </ul> */}
             
-            <ul>
+            {/* <ul>
                 <li>
                     <a href=""><FaTrashAlt /></a>
                 </li>
-            </ul>
+            </ul> */}
             
 
 

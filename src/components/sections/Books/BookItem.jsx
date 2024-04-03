@@ -4,7 +4,6 @@ import './Books.css'
 import {Link} from "react-router-dom";
 
 
-// eslint-disable-next-line react/prop-types
 const BookItem = ({id, title, author, image, price, discount, discount_price, free}) => {
     return (
 

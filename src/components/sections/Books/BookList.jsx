@@ -4,6 +4,7 @@ import { FaArrowUpRightDots } from "react-icons/fa6";
 import LessonTop from '../Lessons/LessonTop'
 import Header from '../../Header'
 import Levels from '../Levels/Levels';
+import { Link } from 'react-router-dom';
 
 const BookList = () => {
   return (
@@ -13,7 +14,10 @@ const BookList = () => {
         <Levels/>
         <LessonTop/>
     <div className='lesson-name'>
+        <Link to={1}>
         <span className='fw-semibold fs-5 ps-4'>Unit title</span>
+        </Link>
+    
     <div className='total-words'>
         <div>
             <span className='text-secondary'>Total words</span>

@@ -13,14 +13,14 @@ const BookUnits = () => {
 
     const {id} = useParams(); 
 
-
     useEffect(() => {
         const cachedBookUnits = localStorage.getItem('bookUnits'+id);
 
-        if(cachedBookUnits) {
+        if(cachedBookUnits ) {
             setBookUnitList(JSON.parse(cachedBookUnits));
         }
         else{
+            
             const USER_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnZvY2FidWxhcnkuYXovYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTA0Mjg1NjAsImV4cCI6MTczMzc1NjU2MCwibmJmIjoxNzEwNDI4NTYwLCJqdGkiOiJKR3dvMHJReWtSNk40bXMwIiwic3ViIjoiOTU3OCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7EpzzGQd6H0zfdQf5VXR7tox2HlYizkXsV_jAjHshZA';
 
             const api = 'https://api.vocabulary.az/api/books/'+id+'/units'
@@ -45,13 +45,17 @@ const BookUnits = () => {
         <div>
             <Header/>
             <BookUnitTop/>
+            <div className="col-12 ">
             {
-                bookUnitList.map((bookUnit) => {
-                    return (
+                  bookUnitList.map((bookUnit) => {
+                    return(
+                     
                         <BookUnitCard key={bookUnit.id} bookUnit={bookUnit}/>
                     )
+                    
                 })
             }
+            </div>
         </div>
     )
 }
