@@ -46,15 +46,10 @@ const BookUnits = () => {
             <BookUnitTop/>
             <div className="col-12 ">
             {
-
-                
                  bookUnitList && bookUnitList.map((bookUnit) => {
                     return(
-
                         <BookUnitCard key={bookUnit.id} bookUnit={bookUnit}/>
-
-                    );
-                    
+                    );   
                 })}
             </div>
         </div>

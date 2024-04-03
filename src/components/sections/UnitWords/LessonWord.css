@@ -42,4 +42,8 @@
 .lesson-word-name{
     padding-right: 50px;
 }
- 
+.nav-item .nav-link{
+    font-weight:500;
+    color: #3c3c3d;
+    opacity: .9;
+}

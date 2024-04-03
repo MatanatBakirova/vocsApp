@@ -1,0 +1,23 @@
+.words-edit ul {
+    list-style: none;
+}
+.words-edit li{
+    list-style: none;
+    font-size: 20px;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    background-color: #eaf0fe;
+    border-radius: 10px;
+  }
+  .words-edit li a{
+    opacity: .6;
+  }
+  .learned-componet .nav-link {
+    border-radius: 10px;
+    color: #00C968;
+    background-color:#E5FFF3;
+  }
+  .ciplay1{
+    padding: 10px;
+  }

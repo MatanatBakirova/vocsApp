@@ -6,7 +6,7 @@ import 'swiper/swiper-bundle.css';
 import Books from './sections/Books/Books.jsx'
 import Levels from "./sections/Levels/Levels.jsx";
 import Header from "./Header.jsx";
-import LessonWords from './sections/LessonSecondPage/LessonWords.jsx';
+import UnitWords from './sections/UnitWords/UnitWords.jsx';
 
 const HomePageBefore = () => {
 
@@ -15,7 +15,7 @@ const HomePageBefore = () => {
             <Header/>
             <Levels key="levels"/>
             <Books/>
-            {/* <LessonWords/> */}
+            {/* <UnitWords/> */}
             </div>
     )
 }
