@@ -50,8 +50,12 @@
     border-radius: 10px;
   }
   .lesson-icons li a{
+    color:#324eff;
+
     opacity: .6;
   }
-  .lesson-name span{
+  .lesson-name a{
+    color: black;
+    text-decoration: none;
     width: 300px;
   }

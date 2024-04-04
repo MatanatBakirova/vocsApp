@@ -4,7 +4,7 @@ import './LessonWord.css'
 const LessonWordHeader = () => {
   return (
     <div>
-    <ul class="nav border justify-content-between p-2 rounded-4">
+    <ul class="nav border justify-content-between p-2 rounded-4 d-flex">
       <div className='word-components d-flex'>
 
 <li class="nav-item">

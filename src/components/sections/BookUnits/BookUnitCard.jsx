@@ -5,14 +5,16 @@ import './BookUnit.css'
  import { FaArrowUpRightDots } from "react-icons/fa6";
  import { FiEdit } from "react-icons/fi";
  import { FaTrashAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
-const BookUnitCard = ({id, bookUnit}) => {
+const BookUnitCard = ({id,bookUnit}) => {
   return (
     <div className='d-flex mb-2'>
         <div className='lesson-name'>
+            <Link to={`/unitwords/${id}`}>
             <span className='fw-semibold fs-5 ps-4'>{bookUnit.title}</span>
+            </Link>
 
-      
         <div className='total-words'>
             <div>
                 <span className='text-secondary'>Total words</span>

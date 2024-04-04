@@ -5,7 +5,10 @@ import { FiEdit } from "react-icons/fi";
 import { FaTrashAlt } from "react-icons/fa";
 
 
-const Words = () => {
+const Words = (id,word,translate) => {
+
+
+
   return (
     <div>
     <div>
@@ -19,11 +22,11 @@ const Words = () => {
 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link pe-3" href="#">Influential</a>
+<a class="nav-link pe-3" href="#">{word}</a>
 </li>
 </div>
 <li class="nav-item">
-<a class="nav-link" href="#">Təsirli</a>
+<a class="nav-link" href="#">{translate}</a>
 </li>
 <div className='learned-componet d-flex '>
 <li class="nav-item">
