@@ -6,21 +6,27 @@ import LessonWordHeader from '../UnitWords/LessonWordHeader';
 import Words from './Words';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import { useParams } from 'react-router-dom';
 
 
 const UnitWords = () => {
   const[wordsList, setWordsList]=useState([]);
+  const {bookId,unitId,} = useParams(); 
+
 
 
   useEffect(()=> {
+
+    
+
     
     const USER_TOKEN ='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnZvY2FidWxhcnkuYXovYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTIyMTI4NDYsImV4cCI6MTczNTU0MDg0NiwibmJmIjoxNzEyMjEyODQ2LCJqdGkiOiJ6VHBsYnphaTZ0cGVuN3VtIiwic3ViIjoiOTU3OCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FPh38cqsmX-jd15Hg4ncB7DPuEImyfk7hz1On1agYXA'
 
-    const api = 'https://api.vocabulary.az/api/books/'
-    +id+'/units/7/words'
+    const api = 'https://api.vocabulary.az/api/books/'+bookId+'/units/'+unitId+'/words'
+    // console.log(api)
 
-    axios.get(api,{
+    axios.get(api,
+      {
       headers: {
         'Authorization': `Bearer ${USER_TOKEN}`
     }
@@ -36,16 +42,8 @@ const UnitWords = () => {
       console.log('Serverdə xəta: ' + err);
   })
 
-    
-
-
-
-
-
-
-  },[])
+  },[unitId,bookId])
   
-
   return (
     <>
     <div>
@@ -83,13 +81,12 @@ const UnitWords = () => {
                 </div>
         </section>
         <LessonWordHeader/>
-        <div className='col-12'>
+        <div className='coll-12'>
             { wordsList && wordsList.map(wordData =>(
                <Words key={wordData.id}
-                      bookUnitId={wordData.book_unit_id}
-                      word={wordData.word}
-                      translate={wordData.translate}
-               
+               word={wordData.word}
+               translate={wordData.translate}
+    
                
                
                /> 

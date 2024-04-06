@@ -25,8 +25,8 @@ const All = () => {
                 <Route path='/lessons' element={<Lessons/>}/>
                 <Route path='/books' element={<BookList/>}/>
                 <Route path='/lesson' element={<Lessons/>}/>
-                <Route path='/book/:id' element={<BookUnits/>} />
-                <Route path='/unitwords/:id' element={<UnitWords/>}/>
+                <Route path='/book/:bookId' element={<BookUnits/>} />
+                <Route path='/unitwords/:bookId/:unitId' element={<UnitWords/>}/>
 
                 <Route path='/Sign-in' element={
                     <div className="login-register-page"> {/* Login sehifesi ucun yeni bir div */}

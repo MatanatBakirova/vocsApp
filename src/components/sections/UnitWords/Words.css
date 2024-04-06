@@ -21,3 +21,10 @@
   .ciplay1{
     padding: 10px;
   }
+  .translate li a{
+    font-weight: 500;
+    color: #3c3c3d;
+    opacity: .9;
+    text-decoration: none;
+
+  }

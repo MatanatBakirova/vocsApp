@@ -10,10 +10,10 @@ const BookUnits = () => {
 
     const [bookUnitList, setBookUnitList] = useState([])
 
-    const {id} = useParams(); 
+    const {bookId} = useParams(); 
 
     useEffect(() => {
-        const cachedBookUnits = localStorage.getItem('bookUnits'+id);
+        const cachedBookUnits = localStorage.getItem('bookUnits'+bookId);
 
         if(cachedBookUnits ) {
             setBookUnitList(JSON.parse(cachedBookUnits));
@@ -22,7 +22,7 @@ const BookUnits = () => {
             
             const USER_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnZvY2FidWxhcnkuYXovYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTIyMTI4NDYsImV4cCI6MTczNTU0MDg0NiwibmJmIjoxNzEyMjEyODQ2LCJqdGkiOiJ6VHBsYnphaTZ0cGVuN3VtIiwic3ViIjoiOTU3OCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.FPh38cqsmX-jd15Hg4ncB7DPuEImyfk7hz1On1agYXA';
 
-            const api = 'https://api.vocabulary.az/api/books/'+id+'/units'
+            const api = 'https://api.vocabulary.az/api/books/'+bookId+'/units'
             axios.get(api, {
                 headers: {
                     'Authorization': `Bearer ${USER_TOKEN}`
@@ -30,14 +30,14 @@ const BookUnits = () => {
             })
                 .then(response => {
                     setBookUnitList(response.data.data);
-                    localStorage.setItem('bookUnits'+id, JSON.stringify(response.data.data));
+                    localStorage.setItem('bookUnits'+bookId, JSON.stringify(response.data.data));
                 })
                 .catch((err) => {
                     console.log('Serverdə xəta: ' + err);
                 })
         }
 
-    }, [id]);
+    }, [bookId]);
 
 
     return (
@@ -49,7 +49,8 @@ const BookUnits = () => {
                 bookUnitList.map((bookUnit) => {
                     return(
                         <BookUnitCard key={bookUnit.id}
-                                      id={bookUnit.id}
+                                      bookId={bookId}
+                                      unitId={bookUnit.id}
                                      bookUnit={bookUnit} />
                     )  
                 })}

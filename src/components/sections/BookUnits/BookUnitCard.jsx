@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './BookUnit.css'
  import { PiBrain } from "react-icons/pi";
@@ -7,11 +6,11 @@ import './BookUnit.css'
  import { FaTrashAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-const BookUnitCard = ({id,bookUnit}) => {
+const BookUnitCard = ({bookId,unitId,bookUnit}) => {
   return (
     <div className='d-flex mb-2'>
         <div className='lesson-name'>
-            <Link to={`/unitwords/${id}`}>
+            <Link to={`/unitwords/${bookId}/${unitId}`}>
             <span className='fw-semibold fs-5 ps-4'>{bookUnit.title}</span>
             </Link>
 

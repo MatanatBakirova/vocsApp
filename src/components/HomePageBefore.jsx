@@ -15,8 +15,6 @@ const HomePageBefore = () => {
             <Header/>
             <Levels key="levels"/>
             <Books/>
-            
-            {/* <UnitWords/> */}
             </div>
     )
 }
